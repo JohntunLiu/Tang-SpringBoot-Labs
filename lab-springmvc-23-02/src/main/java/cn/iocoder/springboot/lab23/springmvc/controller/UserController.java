@@ -5,10 +5,8 @@ import cn.iocoder.springboot.lab23.springmvc.core.vo.CommonResult;
 import cn.iocoder.springboot.lab23.springmvc.core.vo.UserVO;
 import cn.iocoder.springboot.lab23.springmvc.exception.ServiceException;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.http.MediaType;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.UUID;
 
@@ -82,6 +80,16 @@ public class UserController {
     public void exception03() {
         log.info("[exception03]");
         throw new ServiceException(ServiceExceptionEnum.USER_NOT_FOUND);
+    }
+
+    @PostMapping(value = "/add",
+            // ↓ 增加 "application/xml"、"application/json" ，针对 Content-Type 请求头
+            consumes = {MediaType.APPLICATION_XML_VALUE, MediaType.APPLICATION_JSON_VALUE},
+            // ↓ 增加 "application/xml"、"application/json" ，针对 Accept 请求头
+            produces = {MediaType.APPLICATION_XML_VALUE, MediaType.APPLICATION_JSON_VALUE}
+    )
+    public UserVO add(@RequestBody UserVO user) {
+        return user;
     }
 
 }

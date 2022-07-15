@@ -15,6 +15,8 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.http.MediaType;
 import org.springframework.http.converter.HttpMessageConverter;
+import org.springframework.http.converter.json.Jackson2ObjectMapperBuilder;
+import org.springframework.http.converter.xml.MappingJackson2XmlHttpMessageConverter;
 import org.springframework.web.cors.CorsConfiguration;
 import org.springframework.web.cors.UrlBasedCorsConfigurationSource;
 import org.springframework.web.filter.CorsFilter;
@@ -154,6 +156,8 @@ public class SpringMVCConfiguration implements WebMvcConfigurer {
 //        xmlBuilder.indentOutput(true);
 //        converters.add(new MappingJackson2XmlHttpMessageConverter(xmlBuilder.build()));
 //    }
+
+// SpringMVC 整合 Fastjson
 
     @Override
     public void configureMessageConverters(List<HttpMessageConverter<?>> converters) {
