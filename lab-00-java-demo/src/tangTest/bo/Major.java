@@ -9,6 +9,7 @@ public class Major implements Serializable {
     private String majorName;
     private Long majorId;
 
+    public Major() {}
     public Major(String majorName, Long majorId) {
         this.majorName = majorName;
         this.majorId = majorId;
