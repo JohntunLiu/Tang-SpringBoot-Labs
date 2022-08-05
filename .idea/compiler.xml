@@ -9,6 +9,7 @@
         <outputRelativeToContentRoot value="true" />
         <module name="lab-springmvc-23-01" />
         <module name="lab-springmvc-23-02" />
+        <module name="lab-01-annotation" />
         <module name="lab-27-webflux-01" />
         <module name="lab-12-mybatis" />
       </profile>
@@ -38,6 +39,7 @@
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="lab-01-annotation" options="-parameters" />
       <module name="lab-12-mybatis" options="-parameters" />
       <module name="lab-27-webflux-01" options="-parameters" />
       <module name="lab-55-mapstruct-demo" options="-parameters" />

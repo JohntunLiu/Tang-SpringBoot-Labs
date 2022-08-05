@@ -45,15 +45,11 @@ public class FunctionalPrograming {
                 ,
 
                 "23"
-                ,
-
-                "CHEERS"
+                , "CHEERS"
                 ,
 
                 "6"
         });
-
-
 
         System.out.println(list);
 
@@ -83,17 +79,20 @@ public class FunctionalPrograming {
         Student student = new Student("marry", 123L, new Major());
         Long score = getMajorId(student);
         System.out.println(score);
-
-
     }
 
     public static Long getMajorId(Student student) {
+        //取majorId
+        /*
+        * ofNullable(province ) ：它以一种智能包装的方式来构造一个 Optional实例， province是否为 null均可以。如果为 null，返回一个单例空 Optional对象；如果非 null，则返回一个 Optional包装对象
+map(xxx )：该函数主要做值的转换，如果上一步的值非 null，则调用括号里的具体方法进行值的转化；反之则直接返回上一步中的单例 Optional包装对象
+orElse(xxx )：很好理解，在上面某一个步骤的值转换终止时进行调用，给出一个最终的默认值
+* */
         return Optional.ofNullable(student)
                 .map(Student::getMajor)
                 .map(Major::getMajorId)
                 .orElse(null);
     }
-
 
     public static boolean isNum(String str) {
         for (int i = 0; i < str.length(); i++) {
