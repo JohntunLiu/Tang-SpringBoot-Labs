@@ -28,4 +28,16 @@ public class ListDemo {
         strings.removeIf(str -> str.equals("1"));
         System.out.println(strings);
     }
+
+
+    //// 返回 key 的 set 视图
+    //Set<K> keySet()；
+    //// 返回所有 value   Collection 视图
+    //Collection<V> values();
+    //// 返回 key-value 的 set 视图
+    //Set<Map.Entry<K, V>> entrySet();
+
+    //如果需要对外返回 Map 这三个方法产生的集合，建议再来个套娃。
+    //
+    //new ArrayList<>(map.values());
 }
