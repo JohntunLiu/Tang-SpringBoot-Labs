@@ -20,6 +20,9 @@
         <module>lab-27-webflux-01</module>
         <module>lab-12-mybatis</module>
         <module>lab-01-annotation</module>
+        <module>lab-00-java-demo</module>
+        <module>lab-55-mapstruct-demo</module>
+        <module>lab-springmvc-23-01</module>
     </modules>
 
     <properties>

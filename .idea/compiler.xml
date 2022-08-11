@@ -11,9 +11,10 @@
         <module name="lab-springmvc-23-02" />
         <module name="lab-01-annotation" />
         <module name="lab-27-webflux-01" />
+        <module name="lab-00-java-demo" />
         <module name="lab-12-mybatis" />
       </profile>
-      <profile name="Annotation profile for lab-55-mapstruct-demo" enabled="true">
+      <profile name="Annotation profile for tangTest" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
@@ -39,6 +40,7 @@
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="lab-00-java-demo" options="-parameters" />
       <module name="lab-01-annotation" options="-parameters" />
       <module name="lab-12-mybatis" options="-parameters" />
       <module name="lab-27-webflux-01" options="-parameters" />
