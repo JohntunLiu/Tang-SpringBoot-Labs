@@ -11,6 +11,7 @@
         <module name="lab-springmvc-23-02" />
         <module name="lab-01-annotation" />
         <module name="lab-12-mybatis" />
+        <module name="spring-data-redis-with-redisson" />
         <module name="spring-data-redis-with-jedis" />
         <module name="lab-27-webflux-01" />
         <module name="lab-00-java-demo" />
@@ -49,6 +50,7 @@
       <module name="lab-springmvc-23-01" options="-parameters" />
       <module name="lab-springmvc-23-02" options="-parameters" />
       <module name="spring-data-redis-with-jedis" options="-parameters" />
+      <module name="spring-data-redis-with-redisson" options="-parameters" />
     </option>
   </component>
 </project>
